@@ -71,20 +71,21 @@ class main():
         startiter = sptext.get_buffer().get_start_iter()
         lastiter = sptext.get_buffer().get_end_iter()
         read = sptext.get_buffer().get_text(startiter, lastiter, 'false')
-        read = read.replace("\n[encrypted]",'')
-        mpass = builder.get_object('masterpass')
-        saltext = builder.get_object('salt1')
-        password = mpass.get_text().encode()
-        salt = saltext.get_text().encode()
-        kdf = PBKDF2HMAC(algorithm=hashes.SHA256(),
-                         length=32,
-                         salt=salt,
-                         iterations=100000,
-                         backend=default_backend())
-        key = base64.urlsafe_b64encode(kdf.derive(password))
-        f = Fernet(key)
-        toread = f.decrypt(read.encode()).decode()
-        sptext.get_buffer().set_text(toread)
+        if "\n[encrypted]" in read:
+            read = read.replace("\n[encrypted]",'')
+            mpass = builder.get_object('masterpass')
+            saltext = builder.get_object('salt1')
+            password = mpass.get_text().encode()
+            salt = saltext.get_text().encode()
+            kdf = PBKDF2HMAC(algorithm=hashes.SHA256(),
+                             length=32,
+                             salt=salt,
+                             iterations=100000,
+                             backend=default_backend())
+            key = base64.urlsafe_b64encode(kdf.derive(password))
+            f = Fernet(key)
+            toread = f.decrypt(read.encode()).decode()
+            sptext.get_buffer().set_text(toread)
 
     def passgen(self, length=20):
         alphabet = string.ascii_letters + string.digits
