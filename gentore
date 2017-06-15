@@ -10,7 +10,7 @@ import os  # basics
 try:
     import gi
     gi.require_version('Gtk', '3.0')  # inform the PC that we need GTK+ 3.
-    import gi.repository.Gtk as Gtk  # this is the GNOME depends
+    from gi.repository import Gtk  # this is the GNOME depends
 except ImportError as imper:
     print("Importing GObject failed!")
     print("Install GObject bindings.")
@@ -25,6 +25,8 @@ def gload():
                           "/gentore.ui")
     window = builder.get_object('gentore')  # main window
     window.show_all()
+
+
 gload()
 sptext = builder.get_object('sptext')
 with open('gentore.psst', 'r') as psst:
@@ -72,7 +74,7 @@ class main():
         lastiter = sptext.get_buffer().get_end_iter()
         read = sptext.get_buffer().get_text(startiter, lastiter, 'false')
         if "\n[encrypted]" in read:
-            read = read.replace("\n[encrypted]",'')
+            read = read.replace("\n[encrypted]", '')
             mpass = builder.get_object('masterpass')
             saltext = builder.get_object('salt1')
             password = mpass.get_text().encode()
