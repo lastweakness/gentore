@@ -89,7 +89,7 @@ class main():
             toread = f.decrypt(read.encode()).decode()
             sptext.get_buffer().set_text(toread)
 
-    def passgen(self, length=20):
+    def passgen(self, length=32):
         alphabet = string.ascii_letters + string.digits
         while True:
             password = ''.join(secrets.choice(alphabet) for i in range(length))

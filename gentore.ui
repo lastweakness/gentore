@@ -69,9 +69,13 @@ Author: Mufeed Ali
         </child>
         <child>
           <object class="GtkButton" id="genpass">
-            <property name="label" translatable="yes">Generate Password</property>
+            <property name="label" translatable="yes">Generate</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="has_focus">True</property>
+            <property name="is_focus">True</property>
+            <property name="can_default">True</property>
+            <property name="has_default">True</property>
             <property name="receives_default">True</property>
             <property name="image">image1</property>
             <signal name="clicked" handler="on_genpass_clicked" swapped="no"/>
@@ -119,7 +123,9 @@ Author: Mufeed Ali
                       <object class="GtkEntry" id="masterpass">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="visibility">False</property>
                         <property name="placeholder_text" translatable="yes">Type the master password here...</property>
+                        <property name="input_purpose">password</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -131,7 +137,9 @@ Author: Mufeed Ali
                       <object class="GtkEntry" id="salt1">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="max_length">16</property>
+                        <property name="visibility">False</property>
+                        <property name="placeholder_text" translatable="yes">Salt to use</property>
+                        <property name="input_purpose">password</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -169,7 +177,9 @@ Author: Mufeed Ali
                       <object class="GtkEntry" id="masterpass2">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="visibility">False</property>
                         <property name="placeholder_text" translatable="yes">Type the master password here...</property>
+                        <property name="input_purpose">password</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -181,6 +191,9 @@ Author: Mufeed Ali
                       <object class="GtkEntry" id="salt">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="visibility">False</property>
+                        <property name="placeholder_text" translatable="yes">Salt to use</property>
+                        <property name="input_purpose">password</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -231,17 +244,16 @@ Author: Mufeed Ali
       <object class="GtkHeaderBar" id="runhead">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="has_subtitle">False</property>
         <property name="show_close_button">True</property>
         <property name="decoration_layout">minimize:close</property>
-        <child>
+        <child type="title">
           <object class="GtkLabel" id="maintitle">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">&lt;span size="large"&gt;Gentore&lt;/span&gt;
 &lt;span size="x-small"&gt;Secure Pasword Generation and Storage&lt;/span&gt;</property>
             <property name="use_markup">True</property>
-            <property name="justify">right</property>
+            <property name="justify">center</property>
             <property name="track_visited_links">False</property>
           </object>
           <packing>
