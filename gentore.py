@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #
-# Gentore is a password generator for Linux. Its a huge WIP. But it
-# already has the ability to generate a password strong enough that
-# Kaspersky says it will take the Tianhe-2 more than 1000 centuries
-# to crack it.
+# Gentore is a password generator and storage tool for Linux. Its a
+# huge WIP. But it already has the ability to generate a password
+# strong enough that Kaspersky says it will take the Tianhe-2 more
+# than 1000 centuries to crack it.
 from __future__ import print_function
 import sys
 import os  # basics
@@ -31,10 +31,9 @@ gload()
 sptext = builder.get_object('sptext')
 with open('gentore.psst', 'r') as psst:
     sptext.get_buffer().set_text(psst.read())
-import string
 import secrets
+import string
 import base64
-import os
 from cryptography.fernet import Fernet
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
