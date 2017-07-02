@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #
+# Discontinued. Use KeepassXC instead,
+#
 # Gentore is a password generator and storage tool for Linux. Its a
 # huge WIP. But it already has the ability to generate a password
 # strong enough that Kaspersky says it will take the Tianhe-2 more

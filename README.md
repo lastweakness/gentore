@@ -1,9 +1,14 @@
 # Gentore: Secure password generation and Local storage
-## Discontinued since KeepassXC now has password generation
+## Discontinued since KeepassXC now has password generation.
 ## KeepassXC is now the recommended choice. Here's why.
-KeepassXC is a password manager that has been around for a long while in one form or the other. KeepassXC is a much more secure and organized way to store passwords than Gentore. Password Generation was introduced to KeepassXC in the latest release. This also means that it now covers the use-case I had for Gentore. I've switched over to KeepassXC and stopped developing Gentore, especially considering how advanced the password generation, strength-checking and storing is in KeepassXC. Gentore had served its purpose but now, KeepassXC does it better.
+KeepassXC is a password manager that has been around for a long while in one form or the other.  
+KeepassXC is a much more secure and organized way to store passwords than Gentore.  
+Password Generation was introduced to KeepassXC in the latest release. This also means that it now covers the use-case I had for Gentore.  
+I've switched over to KeepassXC and stopped developing Gentore, especially considering how advanced the password generation, strength-checking and storing is in KeepassXC.  
+Gentore had served its purpose but now, KeepassXC does it better.
 
 ## The Old README starts here
+
 Tired of giving all your data and even passwords to random organizations and
 corporates across the web? Well, time to switch then.  
 Gentore is a simple piece of software made for personal use that may be useful
