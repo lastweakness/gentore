@@ -41,8 +41,6 @@ Author: Mufeed Ali
   <object class="GtkWindow" id="gentore">
     <property name="can_focus">False</property>
     <property name="window_position">center</property>
-    <property name="default_width">250</property>
-    <property name="default_height">85</property>
     <signal name="destroy" handler="on_window_destroy" swapped="no"/>
     <child>
       <object class="GtkBox" id="activatables">
@@ -52,6 +50,8 @@ Author: Mufeed Ali
         <property name="margin_right">4</property>
         <property name="margin_top">4</property>
         <property name="margin_bottom">4</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">4</property>
         <child>
@@ -59,6 +59,7 @@ Author: Mufeed Ali
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="editable">False</property>
+            <property name="width_chars">36</property>
             <property name="caps_lock_warning">False</property>
           </object>
           <packing>
@@ -90,6 +91,10 @@ Author: Mufeed Ali
           <object class="GtkExpander" id="saved">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="label_fill">True</property>
+            <property name="resize_toplevel">True</property>
             <child>
               <object class="GtkBox" id="spbox">
                 <property name="visible">True</property>
@@ -105,6 +110,13 @@ Author: Mufeed Ali
                       <object class="GtkTextView" id="sptext">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="hscroll_policy">natural</property>
+                        <property name="vscroll_policy">natural</property>
+                        <property name="pixels_above_lines">1</property>
+                        <property name="pixels_below_lines">1</property>
+                        <property name="left_margin">2</property>
+                        <property name="right_margin">2</property>
                       </object>
                     </child>
                   </object>
@@ -233,7 +245,7 @@ Author: Mufeed Ali
             </child>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">2</property>
           </packing>

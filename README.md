@@ -1,4 +1,9 @@
 # Gentore: Secure password generation and Local storage
+## Discontinued since KeepassXC now has password generation
+## KeepassXC is now the recommended choice. Here's why.
+KeepassXC is a password manager that has been around for a long while in one form or the other. KeepassXC is a much more secure and organized way to store passwords than Gentore. Password Generation was introduced to KeepassXC in the latest release. This also means that it now covers the use-case I had for Gentore. I've switched over to KeepassXC and stopped developing Gentore, especially considering how advanced the password generation, strength-checking and storing is in KeepassXC. Gentore had served its purpose but now, KeepassXC does it better.
+
+## The Old README starts here
 Tired of giving all your data and even passwords to random organizations and
 corporates across the web? Well, time to switch then.  
 Gentore is a simple piece of software made for personal use that may be useful
@@ -63,5 +68,4 @@ to crack your password.
 
 ## What do I ask in return?
 
-Really, nothing. I made this for my personal use and decided to let the world use it if they want it. Donations won't reach my corners anyway.  
-But if you really, really wanna help, a more powerful Linux laptop would be nice. I'm from India and availability of good Linux laptops are horribly bad. Furthermore, I'm 16 and not independent from my parents, who are, at the moment, pretty much broke. I wish to keep my passion of programming and wish to support the projects I love but I'm very limited in what I can do. I'm on a loud Acer Aspire 3810TG with no capacity whatsoever for even proper browsing. A few of the projects I love are games and how do I contribute if I can't even play them to begin with. If you are interested in helping me out, please send a mail to <lastweakness@tuta.io>. I'm counting on you, generous strangers. :)
+Really, nothing. I made this for my personal use and decided to let the world use it if they want it. Donations won't reach my corners anyway.
