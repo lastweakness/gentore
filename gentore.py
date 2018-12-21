@@ -1,11 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Discontinued. Use KeepassXC instead,
-#
-# Gentore is a password generator and storage tool for Linux. Its a
-# huge WIP. But it already has the ability to generate a password
-# strong enough that Kaspersky says it will take the Tianhe-2 more
-# than 1000 centuries to crack it.
 from __future__ import print_function
 import sys
 import os  # basics
@@ -31,8 +26,13 @@ def gload():
 
 gload()
 sptext = builder.get_object('sptext')
-with open('gentore.psst', 'r') as psst:
-    sptext.get_buffer().set_text(psst.read())
+try:
+    with open('gentore.psst', 'r') as psst:
+        sptext.get_buffer().set_text(psst.read())
+except:
+    os.touch('gentore.psst')
+    with open('gentore.psst', 'r') as psst:
+        sptext.get_buffer().set_text(psst.read())
 import secrets
 import string
 import base64
